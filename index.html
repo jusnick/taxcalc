@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tax Calculator</title>
+	</head>
+	
+	<body>
+		<div id="container">
+			<div id="header">
+				A Simple Tax Calculator
+			</div>
+			<div id="content">
+				<div id="form_wrapper">
+					<center>
+					<form id="tax_calculator_form">
+						<input id="monthly_salary" type="text">
+						<button type="button" onclick="calculateTax()">Calculate!</button>
+					</form>
+					</center>
+				</div>
+				<div id="tax_display">
+					<p id="total_monthly_salary"></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<!-- Javascript file referenced at this directory: ../js/-->
+	<script src="main.js"></script>
+	<!-- CSS file linked referenced at this directory: ../css/-->
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- Javascript functions below -->
+	<script>
+	function calculateTax() {
+		//This instantiates a TaxCalculator object and displays the results.
+		var calc1 = new TaxCalculator(document.getElementById('monthly_salary').value);
+		document.getElementById("total_monthly_salary").innerHTML = calc1.displayResults();
+	}
+	</script>
+</html>
