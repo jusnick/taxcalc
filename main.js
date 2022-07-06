@@ -6,21 +6,21 @@ function TaxCalculator(floatMonthlySalary) {
 		if (this.floatMonthlySalary <= 11249.99)
 			floatNSSFContribution = 360.00;
 		else if (this.floatMonthlySalary >= 11250.00 && this.floatMonthlySalary <= 19749.99)
-			floatNSSFContribution = 417.80;
+			floatNSSFContribution = 400.80;
 		else if (this.floatMonthlySalary >= 19750.00 && this.floatMonthlySalary <= 29249.99)
-			floatNSSFContribution = 536.00;
+			floatNSSFContribution = 400.00;
 		else if (this.floatMonthlySalary >= 29250.00 && this.floatMonthlySalary <= 39749.99)
-			floatNSSFContribution = 654.20;
+			floatNSSFContribution = 400.20;
 		else if (this.floatMonthlySalary >= 39750.00 && this.floatMonthlySalary <= 49249.99)
-			floatNSSFContribution = 772.30;
+			floatNSSFContribution = 400.30;
 		else if (this.floatMonthlySalary >= 49250.00 && this.floatMonthlySalary <= 59749.99)
-			floatNSSFContribution = 890.00;	
+			floatNSSFContribution = 400.00;	
 		else if (this.floatMonthlySalary >= 59750.00 && this.floatMonthlySalary <= 69249.99)
-      floatNSSFContribution = 990;
+      floatNSSFContribution = 400;
 		else if (this.floatMonthlySalary >= 69250.00 && this.floatMonthlySalary <= 79249.99)
-			floatNSSFContribution = 1090.20;		
+			floatNSSFContribution = 400.20;		
 		else if (this.floatMonthlySalary >= 79750.00)
-			floatNSSFContribution = 1800.30;
+			floatNSSFContribution = 500.30;
 		
 		return parseFloat(floatNSSFContribution.toFixed(2));
 	}
@@ -198,7 +198,7 @@ function TaxCalculator(floatMonthlySalary) {
 	
 		strDisplayResult = "NSSF Contribution: Ksh" + this.getNSSFContribution() + "<br>";
 		strDisplayResult += "NhifHealth Contribution: Ksh" + this.getNhifContribution() + "<br>";
-		strDisplayResult += "Pag Ibig Contribution: Ksh" + this.getPagIbigContribution() + "<br>";
+		strDisplayResult += "SAVINGS: Ksh" + this.getPagIbigContribution() + "<br>";
 		strDisplayResult += "Monthly Taxable Income: Ksh" + this.getMonthlyTaxableIncome() + "<br>";
 		strDisplayResult += "Yearly Taxable Income: Ksh" + this.getYearlyTaxableIncome() + "<br>";
 		strDisplayResult += "Tax Bracket: " + this.getTaxBracket() + "<br>";
